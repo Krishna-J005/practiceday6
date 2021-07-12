@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sorting</title>
+</head>
+<body>
+    <h2> Sorting Array alphabetically</h2>
+    <P>Sorting array by using sort function</P>
+    <button onclick="mySort()">Try it</button>
+    <p id="demo"></p>
+    <script>
+        const cars =[
+            "BMW",
+            "ALTO",
+            "DZIRE",
+            "SAAB", 
+            "VOLVO"
+        ];
+        document.getElementById("demo").innerHTML= cars;
+        function mySort()
+        {
+            cars.sort();
+            document.getElementById("demo").innerHTML= cars;
+        }
+    </script>
+</body>
+</html>

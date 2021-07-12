@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Marks</title>
+</head>
+<body>
+    <h2>Toppers List</h2>
+    <p id="maths"></p>
+    <button onclick="sortMaths()">Maths</button>
+    <p id="sci"></p>
+    <button onclick="sortSci()">Science</button>
+
+    <script>
+        let students=[
+        { 
+            name: "Kanishak", 
+            maths: 98,
+            science: 97
+        },
+        {
+            name: "Krishna", 
+            maths: 95,
+            science: 99
+        },
+        {
+            name: "Sandeep", 
+            maths: 90,
+            science: 100
+        },
+        ];
+
+        function compareMaths(a,b){
+            if(a.maths<b.maths)
+                return 1;
+            if(a.maths>b.maths)
+                return -1;
+            else
+                return 0;
+        }
+        function compareSci(a,b){
+            if(a.science<b.science)
+                return 1;
+            if(a.science>b.science)
+                return -1;
+            else
+                return 0;
+        }
+
+        function sortMaths(){
+            students.sort(compareMaths);
+            var list="";
+            students.forEach(function(student){
+                list+=student.name + " "+student.maths;
+                list+="<br>"
+            });
+            document.getElementById("maths").innerHTML=list;
+        }
+        function sortSci(){
+            students.sort(compareSci);
+            var list="";
+            students.forEach(function(student){
+                list+=student.name + " "+student.maths;
+                list+="<br>"
+            });
+            document.getElementById("sci").innerHTML=list;
+        }
+
+
+    </script>
+</body>
+</html>
