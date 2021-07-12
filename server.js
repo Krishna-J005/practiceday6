@@ -1,6 +1,7 @@
 const express= require ('express'); //import express framework
 const server =express(); //initialize
 
+
 server.get('/',function(request,response){
     console.log(request.method);
     console.log(request.query.query1);
@@ -11,7 +12,17 @@ server.get('/',function(request,response){
     console.log('value of accept header='+request.headers['cache-control']);
     console.log(request.response);
     response.send('Hello World');
-})
-server.listen(3000,function(){
+   
+});
+server.listen(4000,function(){
     console.log('server started');
-})
+});
+
+const usr={
+    name:"Krishna",
+    age:22
+}
+
+console.log(user.name);
+user.name="Shyam"
+console.log(user['name']);
