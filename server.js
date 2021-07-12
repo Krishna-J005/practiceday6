@@ -18,7 +18,7 @@ server.listen(4000,function(){
     console.log('server started');
 });
 
-const usr={
+const user={
     name:"Krishna",
     age:22
 }
